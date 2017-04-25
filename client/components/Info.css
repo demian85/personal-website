@@ -1,0 +1,39 @@
+.list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list > li {
+  padding: 0.25em 0 0.25em calc(20px + 0.5em);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.home {
+  background-image: url(/images/ic_home_white_24px.svg);
+}
+
+.birth {
+  display: none;
+  background-image: url(/images/ic_cake_white_24px.svg);
+}
+
+.phone {
+  display: none;
+  background-image: url(/images/ic_smartphone_white_24px.svg);
+}
+
+.email {
+  background-image: url(/images/ic_mail_outline_white_24px.svg);
+}
+
+.skype {
+  background-image: url(/images/social/skype.svg);
+}
+
+@media print {
+  .phone, .birth {
+    display: block;
+  }
+}

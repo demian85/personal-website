@@ -1,0 +1,36 @@
+.root {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.root > li {
+  flex: 0;
+  padding: 1px;
+  margin-right: 0.5em;
+  background-color: #fff;
+  border-radius: 6px;
+  transition: transform 0.1s ease;
+}
+
+.root > li:last-child {
+  margin-right: 0;
+}
+
+.root > li:hover {
+  transform: scale(1.1);
+}
+
+.root > li a {
+  display: block;
+}
+
+.root > li img {
+  display: block;
+  width: 24px;
+  max-height: 24px;
+  border-radius: 6px;
+  background-color: #fff;
+}

@@ -1,0 +1,64 @@
+.root {
+  display: flex;
+  flex-flow: row nowrap;
+  max-width: 210mm; /* A4 */
+  margin: 3em auto;
+  box-shadow: 0 0 5px #333;
+  border-radius: 4px;
+  overflow: hidden;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.aside {
+  max-width: 40%;
+  flex: 0 0 auto;
+  padding: 0 1em 1em 0;
+  background-color: #0a7eb0;
+  color: #fff;
+}
+
+.aside > section {
+  page-break-inside: avoid;
+}
+
+.main {
+  flex: 1 1 auto;
+  color: #333;
+  background-color: #fff;
+  padding: 0 1em 1em 0;
+  border-right: 1em solid #0a7eb0;
+}
+
+@media (max-width: 500px) {
+  .root {
+    flex-flow: column nowrap;
+    margin: 1em;
+    border-radius: 0;
+  }
+
+  .aside {
+    width: auto;
+    max-width: none;
+    order: 2;
+  }
+
+  .main {
+    order: 1;
+    border-right: 0
+  }
+
+  .photo {
+    display: none;
+  }
+}
+
+@media print {
+  .root {
+    margin: 0 auto;
+  }
+}
+
+@page {
+  size: A4 portrait;
+  margin: 0cm;
+}

@@ -1,0 +1,26 @@
+.item {
+  padding-top: 1em;
+  page-break-inside: avoid;
+}
+
+.item:first-child {
+  margin-top: 1em;
+  padding-top: 0;
+}
+
+.duration {
+  font-size: 1.1em;
+  margin-bottom: 0;
+}
+
+.item h3 {
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-bottom: 0.25em;
+}
+
+.item h4 {
+  font-size: 1.1em;
+  font-style: italic;
+  margin-bottom: 0.25em;
+}

@@ -1,0 +1,29 @@
+.list {
+  width: 100%;
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+.column {
+  flex-flow: column nowrap;
+}
+
+.row {
+  flex-flow: row wrap;
+}
+
+.list > li {
+  width: 50%;
+  margin: 0.25em 0;
+}
+
+.list > li .icon {
+  font-weight: bold;
+  font-size: 1.5em;
+  vertical-align: middle;
+}
+
+.list > li .text {
+  vertical-align: middle;
+}
