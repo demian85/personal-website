@@ -1,0 +1,31 @@
+{
+  "name": "Demián Andrés Rodriguez personal website",
+  "short_name": "demianrodriguez-personal-website",
+  "start_url": ".",
+  "lang": "en-us",
+  "display": "standalone",
+  "background_color": "#525659",
+  "description": "My personal website and CV",
+  "icons": [
+    {
+      "src": "images/photo-48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "images/photo-230.png",
+      "sizes": "230x230",
+      "type": "image/png"
+    },
+    {
+      "src": "images/photo-144.jpg",
+      "sizes": "144x144",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "images/photo-460.jpg",
+      "sizes": "460x460",
+      "type": "image/jpeg"
+    }
+  ]
+}
