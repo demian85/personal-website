@@ -1,5 +1,5 @@
 const path = require('path');
-
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const clientRules = {
@@ -44,6 +44,7 @@ const clientConfig = {
   },
   devtool: 'cheap-module-source-map',
   plugins: [
+    new webpack.optimize.ModuleConcatenationPlugin(),
     new ExtractTextPlugin('bundle.css'),
   ],
   resolve: {
