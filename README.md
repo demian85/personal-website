@@ -6,4 +6,6 @@ This is basically my CV. You can easily export this Web as PDF using the native 
 
 I took the design from a free CV maker website and decided to build it from scratch using React + CSS + JSX + ES6 + Babel + Webpack + Eslint.... Well, I can keep naming development tools and technologies forever!
 
+Website is hosted on Heroku.
+
 Obviously, this master branch's history has been deleted to hide personal information that's not there anymore :P
