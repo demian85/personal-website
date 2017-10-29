@@ -10,7 +10,7 @@ export default function Profile(props) {
       <header>
         <h1>
           <Photo className={styles.photo} />
-          <span itemProp="name">DEMIÁN ANDRÉS RODRÍGUEZ</span>
+          <span itemProp="name">DEMIÁN ANDRÉS RODRIGUEZ</span>
         </h1>
         <h2><span itemProp="jobTitle">Full Stack Web Developer, Javascript Engineer & Node.js enthusiast</span></h2>
       </header>

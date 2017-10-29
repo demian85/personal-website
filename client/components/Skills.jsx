@@ -8,8 +8,9 @@ export default function Skills(props) {
     <Section icon="/images/ic_wb_incandescent_black_24px.svg" title="Skills">
       <ItemList>
         <Item text="Node.js" />
-        <Item text="HTML" />
-        <Item text="CSS" />
+        <Item text="TypeScript" />
+        <Item text="HTML 5+" />
+        <Item text="CSS 3+" />
         <Item text="React / Redux" />
         <Item text="MySQL" />
         <Item text="MongoDB" />
