@@ -8,7 +8,6 @@ function reducer(prevState = defaults, action) {
   const state = Object.assign({}, prevState);
 
   switch (action.type) {
-
     case types.LOGIN:
       state.user = action.user;
       break;

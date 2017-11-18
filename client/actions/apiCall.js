@@ -23,13 +23,13 @@ function req(method, path, headers = {}, body = null) {
     cache: 'no-cache',
     body: body && JSON.stringify(body),
   })
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`HTTP status: ${response.status}`);
-    }
-    const data = ['HEAD', 'DELETE'].includes(method) ? response.text() : response.json();
-    return data;
-  });
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP status: ${response.status}`);
+      }
+      const data = ['HEAD', 'DELETE'].includes(method) ? response.text() : response.json();
+      return data;
+    });
 }
 
 function call(method, path, body) {
