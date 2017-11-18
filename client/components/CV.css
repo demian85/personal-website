@@ -29,7 +29,7 @@
   border-right: 1em solid #0a7eb0;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 640px) {
   .root {
     flex-flow: column nowrap;
     margin: 1em;
