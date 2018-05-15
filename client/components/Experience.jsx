@@ -26,7 +26,7 @@ export default function Experience(props) {
   return (
     <Section icon="/images/ic_work_white_24px.svg" headerStyle="2" title="Experience" allowPageBreak>
       <Item duration="05.2017 - current" company="Altoros" position="Full Stack Node.js Developer">
-        Currently working on IoT projects using Node.js, Typescript and serverless architectures (mostly AWS Lambda).
+      Currently working on IoT projects using Node.js, Typescript, React, Redux, MQTT protocol for device real-time communication and serverless architectures (mostly AWS Lambda).
       </Item>
       <Item duration="11.2016 - 04.2017" company="Team Capture" position="Full Stack Node.js Developer">
         Created an Electron cross-platform application using WebRTC and cutting edge Web technologies for video/screen/audio real-time sharing.
