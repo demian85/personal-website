@@ -35,7 +35,7 @@
   }
 }
 
-@media (max-width: 915px) {
+@media screen and (max-width: 915px) {
   .root {
     align-self: center;
     flex-flow: row nowrap;
