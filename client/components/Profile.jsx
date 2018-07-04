@@ -25,9 +25,10 @@ export default function Profile(props) {
         develop stunning products with great functionality,
         usability and visualizations.<br />
         In my spare time I love contributing to open source
-        projects on Github. I also have many projects of my
+        projects on Github and working with IoT & Home Automation. I also have many projects of my
         own.
       </p>
+
     </section>
   );
 }
