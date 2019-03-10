@@ -15,11 +15,11 @@ export default function Profile(props) {
         <h2><span itemProp="jobTitle">Full Stack Web Developer, Javascript Engineer & Node.js enthusiast</span></h2>
       </header>
       <p>
-        I've been a developer for the past 13 years.<br />
+        I've been a developer for the past 14 years.<br />
         During this time, I developed many complex single-page
         Web applications combining Javascript with the
         latest technologies and Web API's.<br />
-        I've been venturing into Node.js since version 0.1 and made my way into asynchronous logic. I'm sure it has great potential and I'm looking forward to work on projects using this platform from now on.<br />
+        I've been venturing into Node.js since version 0.1 and made my way into asynchronous logic. I'm sure it has great potential and I'm looking forward to work on projects using this runtime from now on.<br />
         I like having the possibility to research and stay up to
         date with the latest tech trends so I can innovate and
         develop stunning products with great functionality,

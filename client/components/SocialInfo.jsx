@@ -24,11 +24,6 @@ export default function Info(props) {
           </a>
         </li>
         <li>
-          <a title="Google Plus" href="https://plus.google.com/u/0/+Demi%C3%A1nAndr%C3%A9sRodriguez" target="_blank" rel="noopener noreferrer">
-            <img alt="Google Plus" src="/images/social/google-plus.svg" />
-          </a>
-        </li>
-        <li>
           <a title="Facebook" href="https://www.facebook.com/demianrodriguez" target="_blank" rel="noopener noreferrer">
             <img alt="Facebook" src="/images/social/facebook.svg" />
           </a>
