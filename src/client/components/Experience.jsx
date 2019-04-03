@@ -22,7 +22,7 @@ Item.propTypes = {
   position: PropTypes.string.isRequired,
 };
 
-export default function Experience(props) {
+export default function Experience() {
   return (
     <Section icon="/images/ic_work_white_24px.svg" headerStyle="2" title="Experience" allowPageBreak>
       <Item duration="05.2017 - current" company="Altoros" position="Full Stack Node.js Developer">

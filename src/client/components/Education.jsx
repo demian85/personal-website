@@ -21,7 +21,7 @@ Item.propTypes = {
   degree: PropTypes.string.isRequired,
 };
 
-export default function Education(props) {
+export default function Education() {
   return (
     <Section icon="/images/ic_school_black_24px.svg" title="Education">
       <Item

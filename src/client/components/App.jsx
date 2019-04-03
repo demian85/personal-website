@@ -6,9 +6,9 @@ import Home from './Home';
 
 export default function App() {
   return (
-    <section>
+    <React.Fragment>
       <Route exact path="/" component={Home} />
       <Route path="/cv" component={PdfViewer} />
-    </section>
+    </React.Fragment>
   );
 }

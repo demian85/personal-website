@@ -17,7 +17,7 @@ function Rank(props) {
   );
 }
 
-export default function RankedSkills(props) {
+export default function RankedSkills() {
   return (
     <Section icon="/images/ic_code_black_24px.svg" title="Programming Languages">
       <ul className={styles.list}>

@@ -1,19 +1,22 @@
-const express = require('express');
-const React = require('react');
-const ReactDOMServer = require('react-dom/server');
-const { StaticRouter } = require('react-router');
-const App = require('../ServerApp').default;
+import { Router } from 'express';
+import { createElement } from 'react';
+import { renderToString } from 'react-dom/server';
+import { StaticRouter } from 'react-router';
 
-const router = express.Router();
+import App from '../../src/client/components/App';
 
-router.get('/*', function (req, res) {
+const router = Router();
+
+router.get('/*', (req, res) => {
   const context = {};
-  const app = React.createElement(
+
+  const app = createElement(
     StaticRouter,
     { location: req.url, context },
-    React.createElement(App)
+    createElement(App),
   );
-  const html = ReactDOMServer.renderToString(app);
+  const html = renderToString(app);
+
   const googleAnalyticsCode = `
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -28,8 +31,8 @@ router.get('/*', function (req, res) {
 `;
   res.render('index', {
     html,
-    googleAnalyticsCode: process.env.NODE_ENV === 'production' ? googleAnalyticsCode : ''
+    googleAnalyticsCode: process.env.NODE_ENV === 'production' ? googleAnalyticsCode : '',
   });
 });
 
-module.exports = router;
+export default router;

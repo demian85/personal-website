@@ -3,7 +3,7 @@ import React from 'react';
 import Section from './Section';
 import { ItemList, Item } from './widget/ItemList';
 
-export default function Personality(props) {
+export default function Personality() {
   return (
     <Section icon="/images/ic_person_24px.svg" title="Personality">
       <ItemList>

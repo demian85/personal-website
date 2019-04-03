@@ -4,7 +4,7 @@ import Section from './Section';
 
 import styles from './Hobbies.css';
 
-export default function Hobbies(props) {
+export default function Hobbies() {
   return (
     <Section icon="/images/ic_star_black_24px.svg" title="Hobbies">
       <ul className={styles.list}>

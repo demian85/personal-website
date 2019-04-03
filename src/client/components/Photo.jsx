@@ -16,5 +16,5 @@ Photo.propTypes = {
 };
 
 Photo.defaultProps = {
-  className: ''
+  className: '',
 };

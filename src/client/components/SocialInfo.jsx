@@ -4,10 +4,10 @@ import Section from './Section';
 
 import styles from './SocialInfo.css';
 
-export default function Info(props) {
+export default function Info() {
   return (
     <Section icon="/images/ic_public_black_24px.svg" title="">
-      <ul ref="root" className={styles.root}>
+      <ul className={styles.root}>
         <li>
           <a title="LinkedIn" href="https://www.linkedin.com/in/demian85/" target="_blank" rel="noopener noreferrer">
             <img alt="LinkedIn" src="/images/social/linkedin.svg" />

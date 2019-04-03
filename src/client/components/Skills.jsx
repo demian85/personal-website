@@ -3,7 +3,7 @@ import React from 'react';
 import Section from './Section';
 import { ItemList, Item } from './widget/ItemList';
 
-export default function Skills(props) {
+export default function Skills() {
   return (
     <Section icon="/images/ic_wb_incandescent_black_24px.svg" title="Skills">
       <ItemList>

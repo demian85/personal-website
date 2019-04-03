@@ -1,14 +1,16 @@
 {
   "name": "demianrodriguez-personal-website",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "My personal website and CV",
-  "main": "server.js",
+  "main": "build/server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "npm run build",
-    "start": "node server.js",
-    "build": "webpack -p",
-    "dev": "webpack --progress --watch"
+    "start": "node build/server",
+    "start:dev": "nodemon build/server/index.js",
+    "build": "npm run copy && webpack -p",
+    "dev": "npm run copy && webpack --progress --watch",
+    "copy": "mkdir -p build/client/public && cp -a src/client/public build/client"
   },
   "author": "Demian Rodriguez",
   "license": "MIT",
@@ -16,34 +18,32 @@
     "node": "10.x"
   },
   "dependencies": {
-    "babel-core": "^6.24.0",
-    "babel-loader": "^7.1.5",
-    "babel-polyfill": "^6.23.0",
-    "babel-preset-env": "^1.3.2",
-    "babel-preset-react": "^6.23.0",
-    "compression": "^1.7.3",
-    "css-loader": "^0.28.0",
+    "compression": "^1.7.4",
     "dotenv": "^4.0.0",
     "express": "^4.16.4",
-    "extract-text-webpack-plugin": "^3.0.2",
     "hbs": "^4.0.3",
     "prop-types": "^15.7.2",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-redux": "^5.1.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1",
-    "redux": "^3.6.0",
-    "redux-logger": "^3.0.1",
-    "redux-thunk": "^2.3.0",
-    "webpack": "^3.8.1"
+    "react-router-dom": "^4.3.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
     "babel-cli": "^6.24.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^0.28.11",
     "eslint": "^4.10.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4"
+    "eslint-plugin-react": "^7.12.4",
+    "mini-css-extract-plugin": "^0.5.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-node-externals": "^1.7.2"
   }
 }

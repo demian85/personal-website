@@ -2,5 +2,4 @@ node_modules
 npm-debug.log
 .DS_Store
 .env
-client/public/bundle.*
-lib/ServerApp.js
+build

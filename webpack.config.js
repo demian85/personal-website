@@ -1,95 +1,74 @@
 const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const nodeExternals = require('webpack-node-externals');
 
-const clientRules = {
-  babel: {
-    test: /\.jsx?$/,
-    exclude: /(node_modules)/,
-    use: {
-      loader: 'babel-loader',
-      options: {
-        presets: [
-          [
-            'env',
-            {
-              modules: false,
-              targets: { browsers: ['last 2 versions', 'not ie < 11', 'not ie_mob < 11'] }
-            }
-          ],
-          ['react']
-        ]
-      }
-    }
+const isProd = process.env.NODE_ENV === 'production';
+const mode = isProd ? 'production' : 'development';
+
+const babelLoader = {
+  test: /\.jsx$/,
+  exclude: /node_modules/,
+  use: {
+    loader: 'babel-loader',
   },
-  css: {
-    test: /\.css$/,
-    use: ExtractTextPlugin.extract({
-      use: {
-        loader: 'css-loader',
-        options: {
-          modules: true
-        }
-      }
-    })
-  }
+};
+
+const cssLoader = {
+  test: /\.css$/,
+  use: [
+    { loader: MiniCssExtractPlugin.loader },
+    {
+      loader: 'css-loader',
+      options: {
+        modules: true,
+      },
+    },
+  ],
 };
 
 const clientConfig = {
   target: 'web',
-  entry: './client/index.js',
+  entry: './src/client/index.jsx',
+  mode,
   output: {
-    path: path.join(__dirname, 'client', 'public'),
+    path: path.resolve(__dirname, 'build/client/public'),
     filename: 'bundle.js',
   },
-  devtool: 'cheap-module-source-map',
-  plugins: [
-    new webpack.optimize.ModuleConcatenationPlugin(),
-    new ExtractTextPlugin('bundle.css'),
-  ],
+  devtool: isProd ? 'source-map' : 'cheap-module-source-map',
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.css'],
+    extensions: ['.js', '.jsx', '.css'],
   },
   module: {
-    rules: [clientRules.babel, clientRules.css]
+    rules: [babelLoader, cssLoader],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'bundle.css',
+    }),
+  ],
 };
 
 const serverConfig = {
   target: 'node',
-  entry: './client/components/App.jsx',
+  entry: './src/server/index.js',
+  mode: 'development',
   output: {
-    path: path.join(__dirname, 'lib'),
-    filename: 'ServerApp.js',
-    library: 'App',
+    path: path.resolve(__dirname, 'build/server'),
+    filename: 'index.js',
     libraryTarget: 'commonjs2',
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.css'],
+    extensions: ['.js', '.jsx', '.css'],
   },
   module: {
-    rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: /(node_modules)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['react']
-          }
-        }
-      },
-      {
-        test: /\.css$/,
-        use: {
-          loader: 'css-loader/locals',
-          options: {
-            modules: true
-          }
-        }
-      }
-    ]
+    rules: [babelLoader, cssLoader],
   },
+  externals: [nodeExternals()],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'bundle.css',
+    }),
+  ],
 };
 
 module.exports = [clientConfig, serverConfig];

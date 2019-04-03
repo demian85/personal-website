@@ -4,7 +4,7 @@ import Photo from './Photo';
 
 import styles from './Profile.css';
 
-export default function Profile(props) {
+export default function Profile() {
   return (
     <section className={styles.root}>
       <header>

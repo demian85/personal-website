@@ -4,7 +4,7 @@ import Section from './Section';
 
 import styles from './Info.css';
 
-export default function Info(props) {
+export default function Info() {
   return (
     <Section icon="/images/ic_info_24px.svg" title="Personal information">
       <ul className={styles.list}>

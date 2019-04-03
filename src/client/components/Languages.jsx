@@ -17,7 +17,7 @@ function Rank(props) {
   );
 }
 
-export default function Languages(props) {
+export default function Languages() {
   return (
     <Section icon="/images/ic_language_black_24px.svg" title="Languages">
       <ul className={styles.list}>
