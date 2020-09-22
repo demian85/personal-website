@@ -9,8 +9,6 @@ export default function Info() {
     <Section icon="/images/ic_info_24px.svg" title="Personal information">
       <ul className={styles.list}>
         <li className={styles.home} itemProp="birthPlace">Buenos Aires, Argentina</li>
-        <li className={styles.birth}>14.01.1985</li>
-        <li className={styles.phone}>+54 911 3051 1020</li>
         <li className={styles.email} itemProp="email">demian85@gmail.com</li>
         <li className={styles.skype}>demianr85</li>
       </ul>

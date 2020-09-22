@@ -14,26 +14,10 @@
   background-image: url(/images/ic_home_white_24px.svg);
 }
 
-.birth {
-  display: none;
-  background-image: url(/images/ic_cake_white_24px.svg);
-}
-
-.phone {
-  display: none;
-  background-image: url(/images/ic_smartphone_white_24px.svg);
-}
-
 .email {
   background-image: url(/images/ic_mail_outline_white_24px.svg);
 }
 
 .skype {
   background-image: url(/images/social/skype.svg);
-}
-
-@media print {
-  .phone, .birth {
-    display: block;
-  }
 }
