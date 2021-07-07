@@ -21,7 +21,7 @@ const cssLoader = {
       loader: 'css-loader',
       options: {
         modules: true,
-        url: false
+        url: false,
       },
     },
   ],

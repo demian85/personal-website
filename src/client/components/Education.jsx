@@ -29,11 +29,7 @@ export default function Education() {
         entity="Universidad Argentina 'John F. Kennedy'"
         degree="Computer Software Engineering"
       />
-      <Item
-        duration="2003"
-        entity="UBA"
-        degree="CBC"
-      />
+      <Item duration="2003" entity="UBA" degree="CBC" />
       <Item
         duration="1996 - 2012"
         entity="Colegio Santa Teresita del Niño Jesús"

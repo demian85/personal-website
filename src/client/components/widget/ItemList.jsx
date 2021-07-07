@@ -22,9 +22,5 @@ Item.defaultProps = {
 };
 
 export function ItemList(props) {
-  return (
-    <ul className={`${styles.list} ${styles.row}`}>
-      {props.children}
-    </ul>
-  );
+  return <ul className={`${styles.list} ${styles.row}`}>{props.children}</ul>;
 }

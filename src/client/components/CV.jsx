@@ -15,9 +15,13 @@ import SocialInfo from './SocialInfo';
 
 import styles from './CV.css';
 
-export default function () {
+export default function CV() {
   return (
-    <section className={styles.root} itemScope itemType="http://schema.org/Person">
+    <section
+      className={styles.root}
+      itemScope
+      itemType="http://schema.org/Person"
+    >
       <section className={styles.aside}>
         <Photo className={styles.photo} />
         <Info />

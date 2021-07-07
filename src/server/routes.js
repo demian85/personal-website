@@ -3,7 +3,7 @@ import { createElement } from 'react';
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
 
-import App from '../../src/client/components/App';
+import App from '../client/components/App';
 
 const router = Router();
 

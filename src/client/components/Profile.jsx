@@ -10,25 +10,48 @@ export default function Profile() {
       <header>
         <h1>
           <Photo className={styles.photo} />
-          <span itemProp="name">DEMIÁN ANDRÉS RODRIGUEZ</span>
+          <span itemProp="name">DEMIAN ANDRES RODRIGUEZ</span>
         </h1>
-        <h2><span itemProp="jobTitle">Full Stack Web Developer, Javascript Engineer & Node.js enthusiast</span></h2>
+        <h2>
+          <span itemProp="jobTitle">
+            Full Stack Web Developer, Javascript Engineer & Node.js enthusiast
+          </span>
+        </h2>
       </header>
       <p>
-        I've been a developer for the past 14 years.<br />
-        During this time, I developed many complex single-page
-        Web applications combining Javascript with the
-        latest technologies and Web API's.<br />
-        I've been venturing into Node.js since version 0.1 and made my way into asynchronous logic. I'm sure it has great potential and I'm looking forward to work on projects using this runtime from now on.<br />
-        I like having the possibility to research and stay up to
-        date with the latest tech trends so I can innovate and
-        develop stunning products with great functionality,
-        usability and visualizations.<br />
-        In my spare time I love contributing to open source
-        projects on Github and working with IoT & Home Automation. I also have many projects of my
-        own.
+        I'm a Full Stack Javascript Developer with more than 15 years of
+        experience building complex single-page Web Apps.
       </p>
-
+      <p>
+        I discovered Node.js in its early stages (v0.1) and made my way into
+        asynchronous logic by creating many Apps for real-time monitoring and
+        statistics generation. Since then, I started focusing my career on
+        Node.js.
+      </p>
+      <p>
+        Currently, my preferred tech stack for building Web Apps and RESTful
+        services is Javascript/Typescript + React/Redux + Node.js + Express +
+        MongoDB/PostgreSQL + Heroku/AWS + Serverless
+      </p>
+      <p>
+        Many of my recent projects are IoT-related and rely on many AWS
+        services, including Kinesis, Lambda, RDS, API Gateway, ElastiCache, EC2,
+        and Elastic Beanstalk.
+      </p>
+      <p>
+        I have experience working with electronic devices and home-automation
+        systems that use the MQTT protocol for pub-sub real-time communication.
+      </p>
+      <p>
+        I like having the possibility to research and stay up to date with the
+        latest tech trends to innovate and develop stunning products with high
+        functionality, usability, and visualizations.
+      </p>
+      <p>
+        I consider myself to have critical and analytical thinking, being
+        meticulous, organized, and self-motivated. I'm also an advocate of TDD
+        and writing clean, modular, and maintainable code.
+      </p>
     </section>
   );
 }
