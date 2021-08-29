@@ -13,7 +13,7 @@ router.get('/*', (req, res) => {
   const app = createElement(
     StaticRouter,
     { location: req.url, context },
-    createElement(App),
+    createElement(App)
   );
   const html = renderToString(app);
 
@@ -31,7 +31,8 @@ router.get('/*', (req, res) => {
 `;
   res.render('index', {
     html,
-    googleAnalyticsCode: process.env.NODE_ENV === 'production' ? googleAnalyticsCode : '',
+    googleAnalyticsCode:
+      process.env.NODE_ENV === 'production' ? googleAnalyticsCode : '',
   });
 });
 
