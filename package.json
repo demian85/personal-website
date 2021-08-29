@@ -1,6 +1,6 @@
 {
   "name": "demianrodriguez-personal-website",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "My personal website and CV",
   "main": "build/server/index.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "start:dev": "nodemon build/server/index.js",
     "build": "npm run copy && webpack -p",
     "dev": "npm run copy && webpack --progress --watch -d",
-    "copy": "mkdir -p build/client/public && cp -a src/client/public build/client"
+    "copy": "mkdir -p build/client/public && cp -a src/client/public build/client",
+    "format": "prettier --write '**/*.{js,jsx,json,ts,tsx}'"
   },
   "author": "Demian Rodriguez",
   "license": "MIT",
@@ -37,13 +38,14 @@
     "core-js": "^3.6.5",
     "css-loader": "^5.2.6",
     "eslint": "^7.8.1",
-    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
     "mini-css-extract-plugin": "^0.11.1",
     "nodemon": "^2.0.4",
+    "prettier": "^2.3.2",
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
