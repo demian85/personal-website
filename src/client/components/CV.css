@@ -11,6 +11,9 @@
 
 .aside {
   max-width: 40%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
   flex: 0 0 auto;
   padding: 0 1em 1em 0;
   background-color: #0a7eb0;
@@ -44,7 +47,7 @@
 
   .main {
     order: 1;
-    border-right: 0
+    border-right: 0;
   }
 
   .photo {
