@@ -20,14 +20,12 @@ function Item(props) {
 
 Item.defaultProps = {
   company: '',
-  children: null,
 };
 
 Item.propTypes = {
   duration: PropTypes.string.isRequired,
   company: PropTypes.string,
   position: PropTypes.string.isRequired,
-  children: PropTypes.children,
 };
 
 export default function Experience() {

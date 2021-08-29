@@ -40,16 +40,6 @@ export default function Info() {
         </li>
         <li>
           <a
-            title="Facebook"
-            href="https://www.facebook.com/demianrodriguez"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img alt="Facebook" src="/images/social/facebook.svg" />
-          </a>
-        </li>
-        <li>
-          <a
             title="Twitter"
             href="https://twitter.com/demianr85"
             target="_blank"
