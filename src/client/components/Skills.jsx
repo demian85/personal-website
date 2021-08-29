@@ -11,10 +11,9 @@ export default function Skills() {
         <Item text="Deno" />
         <Item text="HTML 5+" />
         <Item text="CSS 3+" />
-        <Item text="React" />
+        <Item text="React + Hooks" />
         <Item text="Redux" />
-        <Item text="SQL" />
-        <Item text="NoSQL" />
+        <Item text="SQL + NoSQL" />
         <Item text="PostgreSQL" />
         <Item text="MongoDB" />
         <Item text="Redis" />

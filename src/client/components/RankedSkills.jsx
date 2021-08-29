@@ -33,20 +33,12 @@ export default function RankedSkills() {
           <Rank value="5" />
         </li>
         <li>
-          <span className={styles.name}>PHP</span>
+          <span className={styles.name}>Java, C, C++</span>
           <Rank value="5" />
         </li>
         <li>
-          <span className={styles.name}>Java</span>
-          <Rank value="4" />
-        </li>
-        <li>
-          <span className={styles.name}>Lua</span>
-          <Rank value="4" />
-        </li>
-        <li>
-          <span className={styles.name}>C / C++</span>
-          <Rank value="4" />
+          <span className={styles.name}>Rust</span>
+          <Rank value="3" />
         </li>
       </ul>
     </Section>

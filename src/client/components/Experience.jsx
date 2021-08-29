@@ -6,20 +6,28 @@ import Section from './Section';
 import styles from './Experience.css';
 
 function Item(props) {
+  const { company, duration, position, children } = props;
+
   return (
     <div className={styles.item}>
-      <div className={styles.duration}>{props.duration}</div>
-      <h3>{props.company}</h3>
-      <h4>{props.position}</h4>
-      <p>{props.children}</p>
+      <div className={styles.duration}>{duration}</div>
+      {company && <h3>{company}</h3>}
+      <h4>{position}</h4>
+      <p>{children}</p>
     </div>
   );
 }
 
+Item.defaultProps = {
+  company: '',
+  children: null,
+};
+
 Item.propTypes = {
   duration: PropTypes.string.isRequired,
-  company: PropTypes.string.isRequired,
+  company: PropTypes.string,
   position: PropTypes.string.isRequired,
+  children: PropTypes.children,
 };
 
 export default function Experience() {
@@ -30,6 +38,7 @@ export default function Experience() {
       title="Experience"
       allowPageBreak
     >
+      <Item duration="05.2021 -" position="Freelance Software developer" />
       <Item
         duration="05.2017 - 05.2021"
         company="Altoros"
