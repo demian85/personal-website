@@ -60,6 +60,10 @@
     width: 210mm; /* A4 */
     margin: 0 auto;
   }
+
+  .aside {
+    display: block;
+  }
 }
 
 @page {
