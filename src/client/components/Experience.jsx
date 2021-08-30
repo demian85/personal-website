@@ -4,15 +4,37 @@ import PropTypes from 'prop-types';
 import Section from './Section';
 
 import styles from './Experience.css';
+import { DateTime } from 'luxon';
+import humanizeDuration from 'humanize-duration';
 
 function Item(props) {
-  const { company, duration, position, children } = props;
+  const { company, from, to, position, children } = props;
 
+  const fromDate = DateTime.fromFormat(from, 'yyyy-MM');
+  const toDate = to ? DateTime.fromFormat(to, 'yyyy-MM') : null;
+  const duration = fromDate
+    .diff(toDate ?? DateTime.local())
+    .negate()
+    .toObject();
+  const fromStr = fromDate.toFormat('LLL yyyy');
+  const toStr = toDate ? toDate.toFormat('LLL yyyy') : '';
+
+  console.log(duration);
   return (
     <div className={styles.item}>
-      <div className={styles.duration}>{duration}</div>
-      {company && <h3>{company}</h3>}
-      <h4>{position}</h4>
+      <h3>{position}</h3>
+      {company && <h4>{company}</h4>}
+      <div className={styles.duration}>
+        {fromStr} - {toStr}
+        {toDate && (
+          <span className={styles.date}>
+            {humanizeDuration(duration.milliseconds, {
+              units: ['y', 'mo'],
+              round: true,
+            })}
+          </span>
+        )}
+      </div>
       <p>{children}</p>
     </div>
   );
@@ -23,9 +45,11 @@ Item.defaultProps = {
 };
 
 Item.propTypes = {
-  duration: PropTypes.string.isRequired,
+  from: PropTypes.string.isRequired,
+  to: PropTypes.string,
   company: PropTypes.string,
   position: PropTypes.string.isRequired,
+  children: PropTypes.children,
 };
 
 export default function Experience() {
@@ -36,9 +60,10 @@ export default function Experience() {
       title="Experience"
       allowPageBreak
     >
-      <Item duration="05.2021 -" position="Freelance Software developer" />
+      <Item from="2021-05" position="Freelance Software developer" />
       <Item
-        duration="05.2017 - 05.2021"
+        from="2017-05"
+        to="2021-05"
         company="Altoros"
         position="Full Stack Node.js Developer"
       >
@@ -52,7 +77,8 @@ export default function Experience() {
         hosted on AWS.
       </Item>
       <Item
-        duration="11.2016 - 04.2017"
+        from="2016-11"
+        to="2017-04"
         company="Team Capture"
         position="Full Stack Node.js Developer"
       >
@@ -60,7 +86,8 @@ export default function Experience() {
         edge Web technologies for video/screen/audio real-time sharing.
       </Item>
       <Item
-        duration="09.2016 - 10.2016"
+        from="2016-09"
+        to="2016-10"
         company="AmberAds"
         position="Full Stack Node.js Developer"
       >
@@ -72,7 +99,8 @@ export default function Experience() {
         readability and modularity.
       </Item>
       <Item
-        duration="01.2013 - 08.2016"
+        from="2013-01"
+        to="2016-08"
         company="Avature"
         position="Frontend Engineer"
       >
@@ -87,7 +115,8 @@ export default function Experience() {
         Led a small team and developed a social network from scratch.
       </Item>
       <Item
-        duration="09.2010 - 12.2012"
+        from="2010-09"
+        to="2012-12"
         company="Nicestream"
         position="Node.js Engineer"
       >
@@ -105,7 +134,8 @@ export default function Experience() {
         statistics generation.
       </Item>
       <Item
-        duration="01.2009 - 09.2010"
+        from="2009-01"
+        to="2010-09"
         company="ZedPlan"
         position="Technical Leader"
       >
@@ -113,7 +143,8 @@ export default function Experience() {
         implementing more than 10 APIs for flight, hotel and holidays.
       </Item>
       <Item
-        duration="02.2007 - 09.2009"
+        from="2007-02"
+        to="2009-09"
         company="GFDD Group"
         position="Web Developer"
       >
@@ -122,7 +153,8 @@ export default function Experience() {
         remote music player.
       </Item>
       <Item
-        duration="09.2006 - 12.2006"
+        from="2006-09"
+        to="2006-12"
         company="Argentina.com"
         position="Web Developer"
       >

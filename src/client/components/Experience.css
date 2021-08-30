@@ -10,7 +10,8 @@
 
 .duration {
   font-size: 1.1em;
-  margin-bottom: 0;
+  margin-bottom: 0.5em;
+  color: #666;
 }
 
 .item h3 {
@@ -20,7 +21,15 @@
 }
 
 .item h4 {
-  font-size: 1.1em;
-  font-style: italic;
+  font-size: 1.15em;
   margin-bottom: 0.25em;
+}
+
+.date {
+  font-size: 0.8em;
+}
+
+.date::before {
+  content: '\00B7';
+  margin: 0 5px;
 }

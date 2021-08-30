@@ -10,6 +10,7 @@ export default function Home() {
     <section className={styles.root}>
       <CV />
       <footer>
+        <p>Last updated: Aug 2021</p>
         <Link to="/cv">View as PDF</Link>
       </footer>
     </section>
