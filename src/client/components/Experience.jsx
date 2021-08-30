@@ -13,7 +13,7 @@ function Item(props) {
   const fromDate = DateTime.fromFormat(from, 'yyyy-MM');
   const toDate = to ? DateTime.fromFormat(to, 'yyyy-MM') : null;
   const duration = fromDate
-    .diff(toDate ?? DateTime.local())
+    .diff(toDate || DateTime.local())
     .negate()
     .toObject();
   const fromStr = fromDate.toFormat('LLL yyyy');
