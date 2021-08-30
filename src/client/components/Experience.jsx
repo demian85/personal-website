@@ -19,7 +19,6 @@ function Item(props) {
   const fromStr = fromDate.toFormat('LLL yyyy');
   const toStr = toDate ? toDate.toFormat('LLL yyyy') : '';
 
-  console.log(duration);
   return (
     <div className={styles.item}>
       <h3>{position}</h3>
@@ -49,7 +48,6 @@ Item.propTypes = {
   to: PropTypes.string,
   company: PropTypes.string,
   position: PropTypes.string.isRequired,
-  children: PropTypes.children,
 };
 
 export default function Experience() {
